@@ -6,3 +6,14 @@ Setelah menyelesaikan kode, jawab pertanyaan berikut:
 3. Mengapa subclass wajib mengimplementasikan semua abstract method dari parent class?
 4. Mengapa abstract method tidak boleh memiliki isi implementasi di dalam abstract class?
 5. Bagaimana abstract class dapat mendukung konsep polimorfisme, dan mengapa objek yang direferensikan melalui tipe abstract class tetap dapat menjalankan perilaku berbeda pada masing-masing subclass?
+
+Jawaban
+1. Abstract class adalah kelas yang tidak bisa dibuat objek secara langsung dan biasanya berperan sebagai kerangka dasar bagi turunan-nya. Kita membutuhkannya untuk menentukan struktur dan aturan umum yang harus diikuti oleh setiap subclass tanpa menentukan detail implementasinya.
+
+2. Abstract class boleh memiliki abstract method dan juga method biasa, sedangkan class biasa tidak memiliki abstract method dan bisa langsung dibuat objeknya tanpa harus diwariskan dulu.
+
+3. Subclass wajib mengimplementasikan abstract method karena abstract method hanya berupa aturan tanpa isi, sehingga subclass harus menyediakan logika sesuai karakter masing-masing objek agar fungsinya benar-benar berjalan.
+
+4. Abstract method tidak boleh memiliki isi karena fungsinya memang untuk didefinisikan ulang oleh subclass, jadi jika diberi isi di dalam abstract class maka konsep “harus diimplementasikan oleh turunan” menjadi tidak relevan.
+
+5. Abstract class mendukung polimorfisme karena kita bisa menyimpan objek-objek berbagai subclass dalam satu referensi bertipe abstract class, dan ketika method dipanggil, Java akan menjalankan implementasi sesuai tipe objek sebenarnya, sehingga tiap turunan dapat berperilaku berbeda meskipun dipanggil melalui tipe induknya.
