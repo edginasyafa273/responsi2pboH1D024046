@@ -7,3 +7,10 @@ Apa yang terjadi jika kita mencoba mengubah nilai suatu konstanta setelah objek 
 Bagaimana cara mendefinisikan konstanta dalam bahasa Java?
 
 Jawaban
+Dalam pemrograman berorientasi objek, terdapat perbedaan antara function dan procedure. Function adalah method yang dipakai untuk melakukan proses perhitungan lalu mengembalikan suatu nilai sehingga dapat digunakan kembali oleh bagian program lainnya. Sementara itu, procedure merupakan method yang digunakan untuk mengeksekusi perintah tertentu namun tidak mengembalikan nilai apa pun dan biasanya hanya melakukan tindakan seperti mencetak informasi ke layar.
+
+Penggunaan konstanta atau variabel final di dalam kelas sangat penting karena nilai tersebut seharusnya tidak mengalami perubahan. Nilai konstan biasanya digunakan untuk data yang bersifat tetap seperti faktor perhitungan, nilai mata uang, atau parameter standar, sehingga penggunaan final membantu menjaga konsistensi dan mencegah perubahan yang tidak disengaja selama program berjalan.
+
+Apabila seseorang mencoba mengubah nilai sebuah konstanta setelah objek dibuat, maka akan muncul kesalahan pada saat kompilasi. Java akan langsung menolak perubahan tersebut karena sifat final memastikan nilai tersebut hanya dapat ditentukan satu kali. Sebagai contoh, sebuah variabel final double faktor = 1.2; tidak dapat diubah menjadi nilai lain seperti faktor = 2.0;, hal ini akan menyebabkan error.
+
+Untuk mendefinisikan konstanta di dalam Java, kita menggunakan keyword final sebelum tipe data, misalnya final int MAX = 10;. Kadang-kadang konstanta ini juga ditulis menggunakan static final jika nilai tersebut berlaku untuk seluruh objek dalam kelas tersebut. Dengan begitu, konstanta dapat digunakan tanpa harus membuat objek terlebih dahulu dan tetap terjaga nilainya selama program dijalankan.
